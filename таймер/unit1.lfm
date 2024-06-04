@@ -1,0 +1,102 @@
+object Form1: TForm1
+  Left = 377
+  Height = 390
+  Top = 175
+  Width = 467
+  Caption = 'Таймер'
+  ClientHeight = 390
+  ClientWidth = 467
+  Color = clActiveBorder
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  LCLVersion = '3.2.0.0'
+  object cifritimera: TMemo
+    Cursor = crNone
+    Left = 24
+    Height = 45
+    Top = 32
+    Width = 424
+    Alignment = taCenter
+    Anchors = [akLeft]
+    BorderSpacing.Top = 6
+    BorderStyle = bsNone
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -17
+    Font.Name = 'Better VCR'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object sec: TEdit
+    Left = 343
+    Height = 28
+    Top = 184
+    Width = 105
+    TabOrder = 1
+    OnChange = secChange
+  end
+  object min: TEdit
+    Left = 184
+    Height = 28
+    Top = 184
+    Width = 105
+    TabOrder = 2
+    OnChange = minChange
+  end
+  object hour: TEdit
+    Left = 24
+    Height = 28
+    Top = 184
+    Width = 105
+    TabOrder = 3
+    OnChange = hourChange
+  end
+  object hour2: TLabel
+    Left = 48
+    Height = 20
+    Top = 152
+    Width = 36
+    Caption = 'Часы'
+  end
+  object min2: TLabel
+    Left = 208
+    Height = 20
+    Top = 152
+    Width = 55
+    Caption = 'Минуты'
+  end
+  object sec2: TLabel
+    Left = 365
+    Height = 20
+    Top = 152
+    Width = 59
+    Caption = 'Секунды'
+  end
+  object stop: TBitBtn
+    Left = 24
+    Height = 35
+    Top = 328
+    Width = 183
+    Caption = 'Стоп'
+    Kind = bkAbort
+    ModalResult = 3
+    OnClick = stopClick
+    TabOrder = 4
+  end
+  object start: TButton
+    Left = 265
+    Height = 35
+    Top = 328
+    Width = 183
+    Caption = 'Старт'
+    TabOrder = 5
+    OnClick = startClick
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 162
+    Top = 234
+  end
+end
